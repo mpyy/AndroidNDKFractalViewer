@@ -20,6 +20,15 @@ model {
             proguardFiles.add(file('proguard-rules.pro'))
         }
     }
+
+    android.ndk {
+        moduleName = "fractal"
+/*
+        CFlags.add("Wall")
+        CFlags.add("Wextra")
+*/
+        ldLibs.add("GLESv2")
+    }
 }
 
 dependencies {
